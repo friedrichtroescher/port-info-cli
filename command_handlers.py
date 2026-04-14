@@ -6,8 +6,10 @@ def handle_get(data_manager, port):
     info = data_manager.get_info(port)
 
     if info is None:
-        print(f"Error: Port '{port}' not found. Valid range is 0-65535.")
-        print("Use 'port help' for more information.")
+        if not port.isdigit() or int(port) > 65535:
+            print(f"Error: Invalid port '{port}'. Valid range is 0-65535.")
+        else:
+            print(f"Error: Port {port} not found.")
         sys.exit(1)
 
     protocol = info["protocol"]
