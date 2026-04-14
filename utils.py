@@ -5,9 +5,9 @@ import json
 def get_config_dir():
     """Get the platform-specific configuration directory."""
     if os.name == "nt":
-        config_dir = os.path.join(os.environ.get("APPDATA", ""), "port-cli")
+        config_dir = os.path.join(os.environ.get("APPDATA", ""), "port-info-cli")
     else:
-        config_dir = os.path.join(os.path.expanduser("~"), ".config", "port-cli")
+        config_dir = os.path.join(os.path.expanduser("~"), ".config", "port-info-cli")
 
     if not os.path.exists(config_dir):
         os.makedirs(config_dir)

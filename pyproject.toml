@@ -1,5 +1,5 @@
 [project]
-name = "port-cli"
+name = "port-info-cli"
 version = "1.0.0"
 description = "CLI tool to look up TCP/UDP port numbers and their services"
 requires-python = ">=3.10"
